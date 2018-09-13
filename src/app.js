@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ArticleList from './components/article-list'
+import ArticlesChart from './components/articles-chart'
 import articles from './fixtures'
 
 class App extends Component {
@@ -7,6 +8,7 @@ class App extends Component {
     return (
       <div>
         <ArticleList articles={articles} />
+        <ArticlesChart articles={articles} />
       </div>
     )
   }
