@@ -19,7 +19,7 @@ class ArticleList extends Component {
     return <ul>{this.body}</ul>
   }
 
-  toggleOpenArticle = (articleId) => () => this.setState({ articleId })
+  toggleOpenArticle = (articleId) => this.setState({ articleId })
 
   get body() {
     return this.props.articles.map((article) => (
@@ -27,7 +27,7 @@ class ArticleList extends Component {
         <Article
           article={article}
           isOpen={this.state.articleId === article.id}
-          toggleOpen={this.toggleOpenArticle(article.id)}
+          toggleOpen={this.toggleOpenArticle}
         />
       </li>
     ))
